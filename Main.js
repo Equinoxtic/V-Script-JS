@@ -1,6 +1,6 @@
 /*
 V-Script-JS
-Version - 1.0
+Version - 1.1
 Released - X
 */
 
@@ -8,11 +8,9 @@ Released - X
 
 function ReleaseStuff()
 {
-
 	// Some variables for version checking
-
 	var repoName = "V-Script-JS";
-	var versionTag = "1.0";
+	var versionTag = "1.1";
 	var isReleased = false;
 	var strReleased;
 
@@ -23,15 +21,12 @@ function ReleaseStuff()
 		// Just checking if released
 		strReleased = "X";
 		console.log("This version of V-Script is not released yet!");
-
 	}
-	if (versionTag != "1.0") {
+	if (versionTag != "1.1") {
 		// Just checking if your v-script is outdated :smug:
 		console.log("Your version of V-Script is very outdated!");
 	}
-
 	logRelease();
-
 }
 
 /* End */
@@ -47,15 +42,39 @@ function Out(str, outputLength)
 	}
 }
 
+function VMath(num1, num2, curOper)
+{
+	switch (curOper)
+	{
+		case "add":
+			console.log(num1+num2);
+			break;
+
+		case "subtract":
+			console.log(num1-num2);
+			break;
+
+		case "multiply":
+			console.log(num1*num2);
+			break;
+
+		case "divide":
+			console.log(num1*num2);
+			break;
+	}
+}
+
 /* End */
 
 function main()
 {
+	// ReleaseStuff(); Uncomment for output
 
-	ReleaseStuff(); // yes
+	/* Write Custom Code here! */
 
-	Out("Hey!", true); // testing :flushed:
+	VMath(30, 30, "multiply");
 
+	/* End */
 }
 
 main();
