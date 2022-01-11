@@ -14,8 +14,8 @@ class ReleaseConfig
         var versionTag = "1.2";
 	var strReleased;
 
-	    // this code :^
-	    function logRelease() { console.log(repoName + " - " + versionTag + "\nReleased?: " + strReleased); }
+	 // this code :^
+	function logRelease() { console.log(repoName + " - " + versionTag + "\nReleased?: " + strReleased); }
 
     	if (versionTag != "1.2") {
 		// Just checking if your v-script is outdated :smug:
