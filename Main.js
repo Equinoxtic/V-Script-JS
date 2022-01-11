@@ -1,80 +1,108 @@
 /*
 V-Script-JS
 Version - 1.1
-Released - X
 */
 
 /* Release Checking */
 
-function ReleaseStuff()
+class ReleaseConfig
 {
-	// Some variables for version checking
-	var repoName = "V-Script-JS";
-	var versionTag = "1.1";
-	var isReleased = false;
-	var strReleased;
+    ReleaseStuff()
+    {
+	    // Some variables for version checking
+    	var repoName = "V-Script-JS";
+        var versionTag = "1.1";
+		var strReleased;
 
-	// this code :^
-	function logRelease() { console.log(repoName + " - " + versionTag + "\nReleased?: " + strReleased); }
+	    // this code :^
+	    function logRelease() { console.log(repoName + " - " + versionTag + "\nReleased?: " + strReleased); }
 
-	if (!isReleased) {
-		// Just checking if released
-		strReleased = "X";
-		console.log("This version of V-Script is not released yet!");
-	}
-	if (versionTag != "1.1") {
+    	if (versionTag != "1.1") {
 		// Just checking if your v-script is outdated :smug:
 		console.log("Your version of V-Script is very outdated!");
 	}
 	logRelease();
+    }
 }
 
-/* End */
+let ReleaseConf = new ReleaseConfig();
 
 /* Utility */
 
-function Out(str, outputLength)
+class Utility
 {
-	if (outputLength) {
-		console.log(str.length);
+    Out(str, outputLength)
+    {
+    	if (outputLength) {
+	    	console.log(str.length);
 	} else {
 		console.log(str);
 	}
+    }
+
+    VMath(num1, num2, curOper)
+    {
+	    switch (curOper)
+        {
+	    	case "add":
+	    		console.log(num1+num2);
+	    		break;
+
+	    	case "subtract":
+	    		console.log(num1-num2);
+	    		break;
+
+	    	case "multiply":
+			console.log(num1*num2);
+			break;
+
+		    case "divide":
+		    	console.log(num1*num2);
+			break;
+	    }
+    }
 }
 
-function VMath(num1, num2, curOper)
+let LocalUtil = new Utility();
+
+/* Miscellaneous */
+
+class Miscellaneous
 {
-	switch (curOper)
-	{
-		case "add":
-			console.log(num1+num2);
-			break;
+    ObjectCreator(name, type, str = "", intval = 0, floatval = 0)
+    {
+        var curString = str;
+        var curInt = intval;
+        var curFloat = floatval;
 
-		case "subtract":
-			console.log(num1-num2);
-			break;
+        console.log("Name: " + name);
 
-		case "multiply":
-			console.log(num1*num2);
-			break;
+        function StrSet(curStr) { console.log("String: " + curStr); }
+        function IntSet(curInt) { console.log("Integer: " + curInt); }
+        function FloatSet(curFlo) { console.log("Float: " + curFlo); }
 
-		case "divide":
-			console.log(num1*num2);
-			break;
-	}
+        switch (type)
+        {
+            case "string":
+                StrSet(curString);
+                break;
+
+            case "int":
+                IntSet(curInt);
+                break;
+
+            case "float":
+                FloatSet(curFloat)
+                break;
+        }
+    }
 }
 
-/* End */
+let Misc = new Miscellaneous();
 
 function main()
 {
-	// ReleaseStuff(); Uncomment for output
-
-	/* Write Custom Code here! */
-
-	VMath(30, 30, "multiply");
-
-	/* End */
+    // Write Custom code
 }
 
 main();
