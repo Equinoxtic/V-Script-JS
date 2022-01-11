@@ -9,15 +9,15 @@ class ReleaseConfig
 {
     ReleaseStuff()
     {
-	    // Some variables for version checking
+	// Some variables for version checking
     	var repoName = "V-Script-JS";
-        var versionTag = "1.1";
-		var strReleased;
+        var versionTag = "1.2";
+	var strReleased;
 
 	    // this code :^
 	    function logRelease() { console.log(repoName + " - " + versionTag + "\nReleased?: " + strReleased); }
 
-    	if (versionTag != "1.1") {
+    	if (versionTag != "1.2") {
 		// Just checking if your v-script is outdated :smug:
 		console.log("Your version of V-Script is very outdated!");
 	}
